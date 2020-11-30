@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Restos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <h2>List of restos</h2>
+
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Cost For Two</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+            </tr>
+            
+            <tr th:each="resto : ${restos}">
+                <td th:text="${resto.id}">Id</td>
+                <td th:text="${resto.name_resto}">Name</td>
+                <td th:text="${resto.type_resto}">Type</td>
+                <td th:text="${resto.cost_for_two}">Cost</td>
+                <td th:text="${resto.address_resto}">Address</td>
+                <td th:text="${resto.phone_number}">Phone Number</td>
+            </tr>
+        </table>
+
+    </body>
+</html>
